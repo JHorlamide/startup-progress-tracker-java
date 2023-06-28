@@ -24,7 +24,7 @@ public class CustomAuthenticationManager implements AuthenticationManager {
 
         UserDTO user = userService.getUserByEmail(email);
         if (!passwordEncoder.matches(password, user.getPassword())) {
-            throw new BadCredentialsException("Invalid credential. Please try again");
+            throw new BadCredentialsException("Invalid email/password. Please try again");
         }
 
         return new UsernamePasswordAuthenticationToken(email, password);

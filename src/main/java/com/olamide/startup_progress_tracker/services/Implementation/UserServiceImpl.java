@@ -7,15 +7,19 @@ import com.olamide.startup_progress_tracker.mapper.UserMapper;
 import com.olamide.startup_progress_tracker.repositories.UserRepository;
 import com.olamide.startup_progress_tracker.services.UserService;
 import lombok.AllArgsConstructor;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @AllArgsConstructor
 @Service
 public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
+    private BCryptPasswordEncoder passwordEncoder;
 
     @Override
     public UserDTO createUser(User user) {
+        String hashedPassword = passwordEncoder.encode(user.getPassword());
+        user.setPassword(hashedPassword);
         var createdUser = userRepository.save(user);
         return UserMapper.mapToDTO(createdUser);
     }

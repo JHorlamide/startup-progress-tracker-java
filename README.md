@@ -9,8 +9,8 @@ To run this application, you will need:
 
 To install this application, follow these steps:
 
-* Clone this repository to your machine: `git clone https://github.com/JHorlamide/oakslab-audition-assignment.git`
-* Navigate to the project directory: `cd oakslab-audition-assignment`
+* Clone this repository to your machine: `git clone https://github.com/JHorlamide/startup-progress-tracker-java.git`
+* Navigate to the project directory: `cd startup-progress-tracker-java`
 
 ## Running the Application
 

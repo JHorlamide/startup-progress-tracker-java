@@ -14,15 +14,4 @@ public class UserMapper {
 
         return userDTO;
     }
-
-    public static User mapToEntity(UserDTO userDTO) {
-        var user = new User();
-
-        user.setId(userDTO.getId());
-        user.setEmail(userDTO.getEmail());
-        user.setPassword(userDTO.getPassword());
-        user.setFullName(userDTO.getFullName());
-
-        return user;
-    }
 }
