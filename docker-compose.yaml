@@ -14,9 +14,9 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_DATABASE: your_database_name
-      MYSQL_USER: your_mysql_user
-      MYSQL_PASSWORD: your_mysql_password
+      MYSQL_DATABASE: startup-tracker
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root@pass123
     volumes:
       - ./mysql-data:/var/lib/mysql
     ports:
